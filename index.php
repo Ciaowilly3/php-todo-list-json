@@ -16,10 +16,11 @@
             <div class="w-50 m-auto">
                 <h1 class="text-center text-secondary my-4 fw-light display-1">Todo List</h1>
                 <!-- contenitore per gli elementi della lista -->
-                <div class="list-container">
-                    <ul>
-                        <li v-for="task in tasks">
+                <div class="list-container bg-white rounded">
+                    <ul class="list-group mb-3">
+                        <li v-for="task in tasks" class="list-group-item d-flex align-items-center justify-content-between">
                             {{task.taskText}}
+                            <i class="fa-solid fa-trash text-danger"></i>
                         </li>
                     </ul>
                 </div>

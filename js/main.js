@@ -3,18 +3,15 @@ const { createApp } = Vue;
 const app = createApp({
   data() {
     return {
-      tasks: [{}],
+      tasks: [],
     };
   },
   methods: {
     fetchTask() {
       axios.get("api/tasksApi.php").then((resp) => {
-        this.tasksFill(resp.data);
+        this.tasks = resp.data;
+        console.log(this.tasks);
       });
-    },
-    tasksFill(data) {
-      debugger;
-      this.tasks = [...data];
     },
   },
   mounted() {
