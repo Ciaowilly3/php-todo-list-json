@@ -14,17 +14,17 @@ const app = createApp({
         console.log(this.tasks);
       });
     },
-    // addTask() {
-    //   debugger;
-    //   axios
-    //     .post("api/taskApi.php", this.formData, {
-    //       headers: { "Content-Type": "multipart/form-data" },
-    //     })
-    //     .then((resp) => {
-    //       debugger;
-    //       this.fetchTask;
-    //     });
-    // },
+    addTask() {
+      debugger;
+      axios
+        .post("api/taskCreator.php", this.formData, {
+          headers: { "Content-Type": "multipart/form-data" },
+        })
+        .then((resp) => {
+          debugger;
+          this.fetchTask();
+        });
+    },
   },
   mounted() {
     this.fetchTask();
