@@ -24,10 +24,9 @@
                         </li>
                     </ul>
                 </div>
-
-                <form action="" method="$_POST">
+                <form action="" method="$_POST" @submit.prevent="addTask()">
                     <div class="d-flex">
-                        <input type="text" name="taskToAdd" placeholder="inserisci elemento" class="form-control flex-grow-1">
+                        <input type="text" name="taskToAdd" v-model="formData.task" placeholder="inserisci elemento" class="form-control flex-grow-1">
                         <button class="btn btn-warning btn-lg">Inserisci</button>
                     </div>
                 </form>
